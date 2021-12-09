@@ -13,7 +13,6 @@ RUN pacman -Syu --noconfirm \
        sudo \
        clang \
        gcc \
-       mesa \
        java-environment=11 \
        git \
        ccache \
