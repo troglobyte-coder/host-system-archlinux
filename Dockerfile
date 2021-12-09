@@ -19,6 +19,7 @@ RUN pacman -Syu --noconfirm \
        ccache \
        cppcheck \
        pkg-config \
+       mesa-libGL-devel \
        python-pyqt6
 
 RUN pip3 -q install --upgrade pip \
