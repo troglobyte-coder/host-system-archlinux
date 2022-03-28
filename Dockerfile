@@ -23,7 +23,7 @@ RUN pacman -Syu --noconfirm \
 
 RUN pip3 -q install --upgrade pip \
     && python3 -m pip -q install \
-       meson==0.60.0 \
+       meson==0.62.0 \
        ninja==1.10.0.post2 \
        cmake==3.18.2.post1 \
        pytest==6.1.2 \
