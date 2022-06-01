@@ -12,8 +12,7 @@ RUN pacman -Syu --noconfirm \
        python-pip \
        sudo \
        clang \
-       gcc \
-       java-environment=11 \
+       gcc11 \
        git \
        ccache \
        cppcheck \
