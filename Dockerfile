@@ -18,6 +18,8 @@ RUN pacman -Syu --noconfirm \
        cppcheck \
        pkg-config \
        mesa \
+       sdl2 \
+       ncurses \
        python-pyqt6
 
 RUN pip3 -q install --upgrade pip \
