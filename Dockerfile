@@ -17,16 +17,10 @@ RUN pacman -Syu --noconfirm \
        ccache \
        cppcheck \
        pkg-config \
-       mesa \
-       gtk4 \
-       ncurses \
-       python-pyqt6
+       ncurses
 
 RUN pip3 -q install --upgrade pip \
     && python3 -m pip -q install \
        meson==0.62.0 \
        ninja==1.10.0.post2 \
-       cmake==3.18.2.post1 \
-       pytest==6.1.2 \
-       pytest-mock==3.3.1 \
-       pytest-xdist==2.1.0
+       cmake==3.18.2.post1
