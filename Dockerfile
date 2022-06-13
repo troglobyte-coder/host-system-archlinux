@@ -18,7 +18,7 @@ RUN pacman -Syu --noconfirm \
        cppcheck \
        pkg-config \
        mesa \
-       sdl2 \
+       gtk4 \
        ncurses \
        python-pyqt6
 
