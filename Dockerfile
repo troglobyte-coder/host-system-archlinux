@@ -12,7 +12,7 @@ ENV CI 1
 
 # setting compiler env vars
 ENV CC ccache clang
-ENV CXX ccache clang++
+ENV CXX ccache clang
 ENV DC dmd
 
 FROM dummy AS getter
@@ -24,7 +24,6 @@ RUN pacman -Syu --noconfirm \
        python-wheel \
        python-pip \
        clang \
-       clang++ \
        dmd \
        ccache \
        cppcheck \
