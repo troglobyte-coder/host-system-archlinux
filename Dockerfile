@@ -13,6 +13,7 @@ RUN pacman -Syu --noconfirm \
        sudo \
        clang \
        gcc11 \
+       dmd \
        git \
        ccache \
        cppcheck \
