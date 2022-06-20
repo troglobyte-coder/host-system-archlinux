@@ -1,8 +1,21 @@
-FROM archlinux:base
+#
+# Troglobyte AppHub:
+# author: Michael Gene Brockus
+# mail: <mailto: michaelbrockus@gmail.com>
+#
+FROM archlinux:base AS dummy
 
+# setting basic image info
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG 'C.UTF-8'
 ENV CI 1
+
+# setting compiler env vars
+ENV CC ccache clang
+ENV CXX ccache clang++
+ENV DC dmd
+
+FROM dummy AS getter
 
 RUN pacman -Syu --noconfirm \
     && pacman -Syu --noconfirm \
@@ -10,14 +23,11 @@ RUN pacman -Syu --noconfirm \
        python-setuptools \
        python-wheel \
        python-pip \
-       sudo \
        clang \
-       gcc11 \
+       clang++ \
        dmd \
-       git \
        ccache \
        cppcheck \
-       pkg-config \
        ncurses
 
 RUN pip3 -q install --upgrade pip \
