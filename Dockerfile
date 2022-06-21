@@ -11,8 +11,8 @@ ENV LANG 'C.UTF-8'
 ENV CI 1
 
 # setting compiler env vars
-ENV CC ccache clang
-ENV CXX ccache clang++
+ENV CC ccache gcc
+ENV CXX ccache g++
 ENV DC dmd
 
 FROM dummy AS getter
@@ -23,7 +23,8 @@ RUN pacman -Syu --noconfirm \
        python-setuptools \
        python-wheel \
        python-pip \
-       clang \
+       gcc \
+       g++\
        dmd \
        dub \
        git \
