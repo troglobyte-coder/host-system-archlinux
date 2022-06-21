@@ -25,9 +25,10 @@ RUN pacman -Syu --noconfirm \
        python-pip \
        clang \
        dmd \
+       dub \
+       git \
        ccache \
-       cppcheck \
-       ncurses
+       cppcheck
 
 RUN pip3 -q install --upgrade pip \
     && python3 -m pip -q install \
